@@ -7,8 +7,7 @@
 // aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
 
-
-
+// ESECUZIONE
 
 // - Creo un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età.
 var studente = {
@@ -16,21 +15,16 @@ var studente = {
   'cognome': 'Rossi',
   'eta': 20,
 }
-
 console.log(studente);
 
 // Stampo a schermo attraverso il FOR IN tutte le proprietà dell'oggetto che riguardano lo studente.
 
 for(var key in studente){
-
   // Proprietà dello studente stampate nella console
   console.log('proprieta dello studente ' + studente[key]);
-
 }
 
-
 // - Creare un array che conterrà oggetti di studenti.
-
 var arrayOggettiStudenti = [
   // Oggetto - Studente 1
   {
@@ -67,10 +61,10 @@ var arrayOggettiStudenti = [
 
 ];
 
+
 console.log(arrayOggettiStudenti);
 
 // Inizializzo un ciclo FOR nell'array degli oggetti che contengono gli studenti
-
 for (var i = 0; i < arrayOggettiStudenti.length; i++) {
   var listaStudenti = arrayOggettiStudenti[i];
 
@@ -83,14 +77,38 @@ for (var i = 0; i < arrayOggettiStudenti.length; i++) {
 
   }
 
-  // Stampo nella console SOLO nome e cognome di ogni singolo studente 
+  // Stampo nella console SOLO nome e cognome di ogni singolo studente
   console.log('Nome e cognome studente singolo: ' + nomeSingoloStudente + ' ' + cognomeSingoloStudente);
-
-
 }
 
 
 
 // - Dare la possibilità all’utente attraverso 3 prompt di
-
 // aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+
+// Chiedo all'utente le proprieta del nuovo Oggetto studente con 3 prompt
+var nome = prompt('Inserisci il nome');
+var cognome = prompt('Inserisci il cognome');
+var eta = parseInt(prompt('Inserisci eta'));
+
+// Creo il nuovo oggetto studente popolandolo con i dati che riceverò dall'utente
+var nuovoOggettoStudente = {
+  'nome': '',
+  'cognome': '',
+  'eta': '',
+};
+
+// Modifico i dati dell'oggetto predefinito creato precedentemente
+nuovoOggettoStudente['nome'] = nome;
+nuovoOggettoStudente['cognome'] = cognome;
+nuovoOggettoStudente.eta = eta;
+
+console.log('nuovo studente:');
+console.log(nuovoOggettoStudente);
+
+// Aggiungo lo studente nuovo nell'array degli studenti già esistenti
+arrayOggettiStudenti.push(nuovoOggettoStudente);
+
+// Stampo la lista finale con il nuovo studente
+console.log('lista finale studenti:');
+console.log( arrayOggettiStudenti);
