@@ -112,3 +112,20 @@ arrayOggettiStudenti.push(nuovoOggettoStudente);
 // Stampo la lista finale con il nuovo studente
 console.log('lista finale studenti:');
 console.log( arrayOggettiStudenti);
+
+
+// TEMPLATE handlebars
+
+var source = $('#student-template').html();
+var template = Handlebars.compile(source);
+
+var dati = {
+  nome: nome,
+  cognome:cognome,
+  eta:eta
+};
+
+var entryHTML = template(dati);
+console.log(entryHTML);
+
+$('#container').append(entryHTML)
