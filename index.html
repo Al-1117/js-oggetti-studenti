@@ -5,25 +5,24 @@
     <title>Studenti</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   </head>
   <body>
-    <div id="container">
+    <div class="container">
 
     </div>
     <script type="text/javascript" src="script/script.js">
 
     </script>
 
-    <script id="student-template" type="text/x-handlebars-template">
-    <div class="nuovo_studente">
-      <h1>Dati nuovo studente</h1>
-      <h2>Nome: {{nome}}</h2>
-      <h2>cognome: {{cognome}}</h2>
-      <h2>Eta: {{eta}}</h2>
-    </div>
-</script>
+    <script class="student-template" type="text/x-handlebars-template">
+      <div class="nuovo_studente">
+        <h1>Dati nuovo studente</h1>
+        <h2>Nome: {{ nome }}</h2>
+        <h2>cognome: {{ cognome }}</h2>
+        <h2>Eta: {{ eta }}</h2>
+      </div>
+    </script>
 
   </body>
 </html>
